@@ -23,7 +23,7 @@ public class Inimigo : MonoBehaviour {
 			if (cronometro >= tempoPorSpawn) {
 				Instantiate(Objetos[Random.Range (0,Objetos.Length)],Destinos[Random.Range (0,Destinos.Length)].transform.position,transform.rotation);
 				cronometro = 0;
-			NavMesh.destination = Player.position;
-			}
+			NavMesh.destination = Player.transform.position;
+		    }
 		}
 	}
